@@ -14,6 +14,7 @@ const signupCtrl = require('../controllers/signupController')
 // TODO: create a html file that explains the routes in this API
 router.get('/', signupCtrl.welcome)
 
+
 // this route registers a new student
 router.post('/signup_student', signupCtrl.signupStudent)
 
