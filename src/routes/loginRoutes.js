@@ -5,7 +5,7 @@ const router = express.Router()
 const loginCtrl = require('../controllers/loginController');
 
 //employer login route
-router.post('/employerLogin', loginCtrl.employerLogin);
+// router.post('/employerLogin', loginCtrl.employerLogin);
 
 // student login route
 router.post('/studentLogin', loginCtrl.studentLogin);
