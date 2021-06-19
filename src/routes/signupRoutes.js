@@ -15,8 +15,8 @@ const signupCtrl = require('../controllers/signupController')
 router.get('/', signupCtrl.welcome)
 
 // the signup route. 
-// it registers a new user
-router.post('/signup', signupCtrl.signup)
+// it registers a new student
+router.post('/studentSignup', signupCtrl.studentSignup)
 
 // you have to export the router variable for this to work
 module.exports = router
