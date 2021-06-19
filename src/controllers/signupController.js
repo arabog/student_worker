@@ -10,10 +10,6 @@ const jwt = require('jsonwebtoken')
 const secret = 'verySecureSECRET'
 const expiryInSeconds = 3600
 
-const Employer = require("../models/employer");
-const Student = require("../models/student");
-const bcrypt = require('bcrypt');
-
 
 // TODO: serve a html file that documents this API
 exports.welcome = (req, res) => res.send('Welcome to the Student Worker API')
