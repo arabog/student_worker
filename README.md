@@ -2,9 +2,9 @@
 This is the backend version of the Student-Worker App by PJT-10 from the Zuri Training
 
 ## A Guide To Get Started
-1 folk this [project](https://github.com/Mitchel-jf/student_worker/)
+1 Folk this [project](https://github.com/Mitchel-jf/student_worker/)
 
-2 git clone your own folked project to your computer
+2 Git clone your own folked project to your computer
 
 3 Before you make any changes, keep your fork in sync to avoid merge conflicts:
 ```
@@ -16,12 +16,12 @@ git pull upstream main
 ```
 4 Create your branch and push your work
 
-5 create a `.env` in the root directory and fill with respective ports and database connection
+5 Create a `.env` in the root directory and fill with respective ports and database connection
 ```
 PORT = ''
 MONGO = ''
 ```
-6 start server 
+6 Start server 
 ```
 npm start
 ```
