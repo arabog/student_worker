@@ -14,9 +14,11 @@ const signupCtrl = require('../controllers/signupController')
 // TODO: create a html file that explains the routes in this API
 router.get('/', signupCtrl.welcome)
 
-// the signup route. 
-// it registers a new user
-router.post('/signup', signupCtrl.signup)
+// this route registers a new student
+router.post('/signup_student', signupCtrl.signupStudent)
+
+// this route registers a new employer
+router.post('/signup_employer', signupCtrl.signupEmployer)
 
 // you have to export the router variable for this to work
 module.exports = router
