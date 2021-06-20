@@ -21,7 +21,7 @@ app.use(express.json({ extended: true }));
 
 
 connectDB() // creates a connection to the database
-
+// "C:\Program Files\MongoDB\Server\4.4\bin\mongod" --dbpath "C:\data\db"
 
 
 // this is what makes separating the routes
