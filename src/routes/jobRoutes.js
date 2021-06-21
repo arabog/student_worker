@@ -7,4 +7,6 @@ router.post('/jobs', JobCtrl.createNewJob)
 
 router.get('/jobs', JobCtrl.fetchJobs)
 
+router.get('/jobs/:id', JobCtrl.fetchSingleJob)
+
 module.exports = router

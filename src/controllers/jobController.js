@@ -31,3 +31,25 @@ exports.fetchJobs = (req, res) => {
                     }
           })
 }
+
+exports.fetchSingleJob = (req, res) => {
+
+          Job.findById(req.params.id, (err, job) => {
+                    if(err) {
+                              return res.status(500).json({message: err})
+                    }else if(!job) {
+                              return res.status(404).json({message: 'job not found'})
+                    }else {
+                              return res.status(200).json({  job  })
+                    }
+          })
+
+}
+
+exports.updateSingleBook = (req, res) => {
+          // next in line
+}
+
+exports.deleteSingleBook = (req, res) => {
+          // next in line
+}
