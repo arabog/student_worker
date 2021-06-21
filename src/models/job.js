@@ -29,10 +29,12 @@ const JobSchema = new mongoose.Schema(
             trim: true
         },
 
-        isRemote: {
-            type: Boolean,
+       jobType: {
+            type: String,
             required: true,
             minLength: 3,
+            enum: ["unknown", "remote", "on-site"],
+            default: "unknown"
         },
 
         filled: {

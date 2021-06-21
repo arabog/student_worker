@@ -14,3 +14,20 @@ exports.createNewJob = (req, res) => {
                               }
           })
 }
+
+exports.fetchJobs = (req, res) => {
+
+          let conditions = {};
+
+          if(req.query.jobType) {
+                    conditions.jobType = req.query.jobType
+          }
+
+          Job.find(conditions, (err, jobs) => {
+                    if(err) {
+                              return res.status(500).json({ message: err })
+                    }else {
+                              return res.status(200).json({ jobs })
+                    }
+          })
+}

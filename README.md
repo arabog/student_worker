@@ -84,7 +84,14 @@ let's include others for locations not stated or we
 make the filter an editable input box that the student
 can enter d location of there choice
 
+#to get the search/filter working:
+use this format
+localhost:7005/jobs?jobType=unknown
+localhost:7005/jobs?jobType=remote
+localhost:7005/jobs?jobType=on-site
 
+change the input value of the raw data each 
+time you make a post req in postman
 
 
 

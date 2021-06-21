@@ -28,8 +28,7 @@ connectDB()
 
 
 
-// this is what makes separating the routes
-// into different files possible 
+// this is what makes separating the routes into different files possible 
 app.use(signupRoutes);
 
 // login routess
@@ -37,19 +36,6 @@ app.use(loginRoutes);
 
 // job routes
 app.use(jobRoutes)
-
-// app.post('/jobs', (req, res) => {
-//           Job.create({
-//                     ...req.body
-//           }, (err, newJob) => {
-//                      if(err) {
-//                                return res.status(500).json({message: err})
-//                      }else {
-//                                return res.status(200).json({ message: "new job created", newJob })
-//                      }
-//           })
-         
-//  })
 
 // listen and serve the apis :
 const { PORT } = process.env
