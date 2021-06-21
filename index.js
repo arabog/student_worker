@@ -6,14 +6,14 @@ const express = require('express');
 const app = express()
 require('dotenv').config();
 const cors = require('cors');
-const Job = require('./src/models/job')
+// const Job = require('./src/models/job')
 
 const connectDB = require('./src/db/mongoose');
 
 // routes import 
 const signupRoutes = require('./src/routes/signupRoutes');
 const loginRoutes = require('./src/routes/loginRoutes');
-// const jobRoutes = require('./src/routes/jobRoutes')
+const jobRoutes = require('./src/routes/jobRoutes')
 
 
 app.use(cors());
@@ -36,20 +36,20 @@ app.use(signupRoutes);
 app.use(loginRoutes);
 
 // job routes
-// app.use(jobRoutes)
+app.use(jobRoutes)
 
-app.post('/jobs', (req, res) => {
-          Job.create({
-                    ...req.body
-          }, (err, newJob) => {
-                     if(err) {
-                               return res.status(500).json({message: err})
-                     }else {
-                               return res.status(200).json({ message: "new job created", newJob })
-                     }
-          })
+// app.post('/jobs', (req, res) => {
+//           Job.create({
+//                     ...req.body
+//           }, (err, newJob) => {
+//                      if(err) {
+//                                return res.status(500).json({message: err})
+//                      }else {
+//                                return res.status(200).json({ message: "new job created", newJob })
+//                      }
+//           })
          
- })
+//  })
 
 // listen and serve the apis :
 const { PORT } = process.env
