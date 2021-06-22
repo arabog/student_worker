@@ -46,10 +46,37 @@ exports.fetchSingleJob = (req, res) => {
 
 }
 
-exports.updateSingleBook = (req, res) => {
-          // next in line
+exports.updateSingleJob = (req, res) => {
+          Job.findByIdAndUpdate(req.params.id, {
+                    jobType: req.body.jobType,
+                    salary: req.body.salary,
+                    duration: req.body.duration,
+                    filled: req.body.filled
+          }, (err, job) => {
+                    if(err) {
+                              return res.status(500).json({message: err})
+                    }else if(!job) {
+                              return res.status(404).json({message: 'job not found'})
+                    }else {
+                              job.save((err, saveJob) => {
+                                        if(err) {
+                                                  return res.status(400).json( { message: err } )
+                                        }else {
+                                                  return res.status(200).json(saveJob)
+                                        }
+                              })
+                    }
+          })
 }
 
-exports.deleteSingleBook = (req, res) => {
-          // next in line
+exports.deleteSingleJob = (req, res) => {
+         Job.findByIdAndDelete(req.params.id, (err, job) => {
+                    if(err) {
+                              return res.status(500).json({message: err})
+                    }else if(!job) {
+                              return res.status(400).json({message: 'job was not found'})
+                    }else {
+                              return res.status(200).json({message: 'job deleted successfully'})
+                    }
+         })
 }

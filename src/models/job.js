@@ -37,6 +37,21 @@ const JobSchema = new mongoose.Schema(
             default: "unknown"
         },
 
+        salary: {
+            type: String,
+            required: true
+        },
+
+        hrsPerWeek: {
+            type: String,
+            required: true
+        },
+
+        duration: {
+            type: String,
+            required: true
+        },
+
         filled: {
             type: Boolean,
             required: true,
